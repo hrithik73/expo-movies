@@ -14,14 +14,14 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.hrithik73.expostarter"
+      "bundleIdentifier": "com.hrithik73.expomovies"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.hrithik73.expostarter"
+      "package": "com.hrithik73.expomovies"
     },
     "web": {
       "favicon": "./src/assets/favicon.png"
