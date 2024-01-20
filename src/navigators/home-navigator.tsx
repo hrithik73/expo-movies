@@ -3,6 +3,7 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 
 import Home from '~/screens/home';
 import { useColorScheme } from 'nativewind';
+import User from '~/screens/user';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,12 +26,27 @@ const HomeNavigator = () => {
   const { colorScheme } = useColorScheme();
 
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Tab.Screen
         name='Home'
         component={Home}
         options={{
           tabBarIcon: () => <TabBarIcon name='home' />,
+          tabBarLabelStyle: {
+            fontSize: 12,
+            color: colorScheme === 'dark' ? 'white' : 'black',
+          },
+        }}
+      />
+      <Tab.Screen
+        name='User'
+        component={User}
+        options={{
+          tabBarIcon: () => <TabBarIcon name='user' />,
           tabBarLabelStyle: {
             fontSize: 12,
             color: colorScheme === 'dark' ? 'white' : 'black',
